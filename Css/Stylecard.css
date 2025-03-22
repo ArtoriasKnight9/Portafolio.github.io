@@ -1,0 +1,24 @@
+*{
+
+    background-color: rgb(5, 5, 5);
+
+}
+
+h1{
+
+    color: aliceblue;
+    
+
+}
+
+label{
+
+    color: aliceblue;
+}
+
+.card, a{
+
+    color: aliceblue;
+    font-size: larger;
+
+}

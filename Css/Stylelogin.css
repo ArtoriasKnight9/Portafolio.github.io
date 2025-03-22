@@ -15,3 +15,8 @@ html {
     text-align: center;
     color: rgb(226, 82, 38);
   }
+
+  label{
+    font-size: 15px;
+
+  }
