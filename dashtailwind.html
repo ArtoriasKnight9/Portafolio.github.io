@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Educational Dashboard</title>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen flex">
+    <!-- Sidebar -->
+    <div class="w-20 bg-white shadow-md flex flex-col items-center py-6 space-y-6">
+        <div class="text-2xl font-bold text-blue-600">edu</div>
+        
+        <nav class="space-y-4">
+            <!-- Sidebar Icons -->
+            <div class="p-2 bg-blue-50 rounded-lg text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <div class="p-2 hover:bg-blue-50 rounded-lg text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+            </div>
+            <div class="p-2 hover:bg-blue-50 rounded-lg text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <div class="p-2 hover:bg-blue-50 rounded-lg text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                </svg>
+            </div>
+        </nav>
+        
+        <div class="mt-auto mb-4">
+            <button class="text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+        <!-- Top Bar -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="relative flex-1 mr-4">
+                <input 
+                    type="text" 
+                    placeholder="Search" 
+                    class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-3 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+            <div class="flex items-center space-x-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                    <span class="text-sm font-medium">KG</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Banner -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-6 mb-6 flex items-center justify-between">
+            <div>
+                <h2 class="text-2xl font-bold mb-2">Effective education!</h2>
+                <p class="text-sm">Learning is easy with online plans. Open your mind and watch your progress and growth in knowledge!</p>
+            </div>
+            <div class="opacity-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Events -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">Events</h3>
+                <a href="#" class="text-sm text-blue-600">More →</a>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="text-sm text-gray-500">26.02</div>
+                    <div class="font-medium mt-2">UX/UI workshop</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="text-sm text-gray-500">02.03</div>
+                    <div class="font-medium mt-2">English lecture</div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <div class="text-sm text-gray-500">07.03</div>
+                    <div class="font-medium mt-2">Business lecture</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timing & Progress -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-4">Timing & Progress</h3>
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <div class="text-sm text-gray-500 mb-2">Computer Science</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 37%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-500 mb-2">Science</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-green-500 h-2.5 rounded-full" style="width: 82%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-sm text-gray-500 mb-2">Business</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-500 h-2.5 rounded-full" style="width: 51%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-medium">Art</div>
+                    <div class="text-sm text-gray-500">2 hours</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
+                <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 01-4.176-3.97L9.99 6.764a2 2 0 00-1.829-1.411L5.26 5.23c-1.257-.04-2.024 1.432-1.406 2.497l1.042 1.966a2 2 0 001.396 1.019l2.49.378a6 6 0 014.464 4.249l.716 2.935c.242.98 1.512 1.256 2.126.476l1.48-1.826c.433-.536.428-1.295-.011-1.824l-1.618-1.84z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-medium">Business</div>
+                    <div class="text-sm text-gray-500">3 hours</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
+                <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-medium">Science</div>
+                    <div class="text-sm text-gray-500">2 hours</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
+                <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-medium">Mathematics</div>
+                    <div class="text-sm text-gray-500">1 hour</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upgrade to Premium -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg p-6 flex items-center justify-between">
+            <div>
+                <h3 class="text-xl font-bold mb-2">Upgrade to Premium</h3>
+                <p class="text-sm">Get full access to all features</p>
+            </div>
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold">Upgrade</button>
+        </div>
+    </div>
+</body>
+</html>
