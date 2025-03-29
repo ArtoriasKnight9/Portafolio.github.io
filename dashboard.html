@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <img src="Imagenes/dashboard.jpg" alt="Imagen del Dashboard">
-    <h2 >Esto es un dashboard no interactivo</h2>
-    <a href="index.html">Ir a INDEX</a>
+   <section class= "flex w-full h-screen bg-linear-105 from-cyan-200 via-purple-200 to-rose-100 p-12"  >  
+
+        <div class= "w-full h-full bg-white flex" >
+            
+            <!-- menuizq -->
+            <div class="w-2/7 h-full bg-white">
+                <!-- logo -->
+                <div>
+                    <img src="Imagenes/logo.png" alt="Logo" class="w-8 h-8 mx-auto mt-3">
+                </div>
+                <!-- menu -->
+                <nav class="mt-8">
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-600 hover:text-black">Dashboard</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Settings</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Profile</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Logout</a></li>
+                    </ul>  
+            </div>
+
+
+            <!-- menucentral -->
+            <div class="w-4/7 h-full bg-purple-200">
+
+            </div>   
+
+            <!-- menudere -->
+            <div class="w-2/7 h-full bg-cyan-500">
+
+            </div>
+
+
+
+
+
+            
+        </div>    
+    </section>
+
 </body>
 </html>
