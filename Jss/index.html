@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="flex flex-col p-5">
+
+    
+    <form action="calificaciones" class="flex" >
+
+        <label for="nombre">Nombre:</label> <br></br>
+        <input type="text" id="nombre" name="nombre"> <br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+
+        <label for="calificacion1">Calificación 1:</label>
+        <input type="number" id="calif1" name="calificacion1"><br><br>
+
+        <label for="calificacion2">Califación 2:</label>
+        <input type="number" id="calif2" name="calificacion2"><br><br>
+
+        <label for="calificacion3">Calificación 3:</label>
+        <input type="number" id="calif3" name="calificacion3"><br><br>
+
+        <div class="flex flex-row gap-4 p-5">
+            <input type="button" value="Enviar">
+            <input type="reset" value="Limpiar">
+
+        </div>
+        
+
+
+    </form>
+
+</div>
+    
+    <div class="flex flex-row">
+        <h2>Concentrado de Calificaciones</h2> <br></br>
+        
+        <table id="concentrado" class="tableFormat table-auto border-separate border border-gray-400">
+            <thead>
+                <tr>
+                    <th class="border-gray-400 ">Nombre  </th>
+                    <th class="border-gray-400 ">Apellido  </th>
+                    <th class="border-gray-400 ">Calificación 1  </th>
+                    <th class="border-gray-400 ">Calificación 2  </th>
+                    <th class="border-gray-400 ">Calificación 3  </th>
+                    <th class="border-gray-400 ">Promedio  </th>
+                </tr>
+
+                
+            </thead>          
+
+        </table>
+        
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
