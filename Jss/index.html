@@ -5,65 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <title>Document</title>
+    <title>Calificaciones</title>
 </head>
 
 
 <body>
-    <div class="flex flex-col p-5">
+    <div class="bg-linear-120 from-cyan-100 via-purple-300 via-purple-200 to-rose-100 p-10">
 
-    
-    <form action="calificaciones" class="flex" >
+    <div class="flex flex-col p-5 items-center">
+        <span class="flex flex-row p-5 text-5xl">
+                Formulario de Calificaciones
+                <br></br>
 
-        <label for="nombre">Nombre:</label> <br></br>
-        <input type="text" id="nombre" name="nombre"> <br><br>
+        </span>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido"><br><br>
+        <span class="flex flex-row p-2 bg-gray-100 shadow-lg rounded-lg ">
+                <form action="submit" class="flex flex-col p-1 items-center" id="transactionForm">
 
-        <label for="calificacion1">Calificación 1:</label>
-        <input type="number" id="calif1" name="calificacion1"><br><br>
-
-        <label for="calificacion2">Califación 2:</label>
-        <input type="number" id="calif2" name="calificacion2"><br><br>
-
-        <label for="calificacion3">Calificación 3:</label>
-        <input type="number" id="calif3" name="calificacion3"><br><br>
-
-        <div class="flex flex-row gap-4 p-5">
-            <input type="button" value="Enviar">
-            <input type="reset" value="Limpiar">
-
-        </div>
-        
-
-
-    </form>
-
-</div>
-    
-    <div class="flex flex-row">
-        <h2>Concentrado de Calificaciones</h2> <br></br>
-        
-        <table id="concentrado" class="tableFormat table-auto border-separate border border-gray-400">
-            <thead>
-                <tr>
-                    <th class="border-gray-400 ">Nombre  </th>
-                    <th class="border-gray-400 ">Apellido  </th>
-                    <th class="border-gray-400 ">Calificación 1  </th>
-                    <th class="border-gray-400 ">Calificación 2  </th>
-                    <th class="border-gray-400 ">Calificación 3  </th>
-                    <th class="border-gray-400 ">Promedio  </th>
-                </tr>
-
+                        <label for="nombre" class="text-2xl font-bold">Nombre:</label> 
+                        <input required type="text" id="nombre" name="nombre" class="border-2 border-gray-400 rounded-lg p-2 m-2 text-lg text-blue-700" > 
                 
-            </thead>          
-
-        </table>
-        
+                        <label for="apellido" class="text-2xl font-bold">Apellido:</label>
+                        <input required type="text" id="apellido" name="apellido" class="border-2 border-gray-400 rounded-lg p-2 m-2  text-lg text-blue-700" >
+                
+                        <label for="calif1" class="text-2xl font-bold">Calificación 1:</label>
+                        <input required type="number" id="calif1" name="calificacion1" class="border-2 border-gray-400 rounded-lg p-2 m-2  text-lg text-blue-700" min="1" max="100" >
+                
+                        <label for="calif2" class="text-2xl font-bold">Califación 2:</label>
+                        <input required type="number" id="calif2" name="calificacion2" class="border-2 border-gray-400 rounded-lg p-2 m-2  text-lg text-red-700" min="1" max="100" >
+                
+                        <label for="calif3" class="text-2xl font-bold">Calificación 3:</label>
+                        <input required type="number" id="calif3" name="calificacion3" class="border-2 border-gray-400 rounded-lg p-2 m-2  text-lg text-green-700" min="1" max="100" >
+                
+                        <div class="flex flex-row gap-4 p-5">
+                            <input type="submit" value="Enviar" class="bg-blue-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg" id="btnEnviar">
+                           
+                        </div>
+                
+                </form>
+        </span>
 
     </div>
+    
+            <div class=" flex flex-col justify-between text-center text-2xl font-bold p-5">
+                <h2>Concentrado de Calificaciones</h2> <br></br>
+                
+                <table id="concentradoRef" class="tableFormat table-auto border-separate border-3 border-x-4 border-y-4 text-2xl font-bold text-black ">
+                    <thead class="bg-gray-200 h-full w-full text-black font-bold">
+                        <tr>
+                            <th class="border-gray-400 ">Nombre  </th>
+                            <th class="border-gray-400 ">Apellido  </th>
+                            <th class="border-gray-400 ">Calificación 1  </th>
+                            <th class="border-gray-400 ">Calificación 2  </th>
+                            <th class="border-gray-400 ">Calificación 3  </th>
+                            <th class="border-gray-400 ">Promedio  </th>
+                        </tr>
+                        <tr class="border border-gray-400 text-black font-bold p-5">
+                            
+                        </tr>
 
+                        
+                    </thead>          
+
+                </table>
+                
+
+            </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
